@@ -3,7 +3,7 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <>
-      <div className="navbar">
+      <div className="px-5 py-5 navbar">
         <div className="navContainer">
           <div className="logo">
             <p>E-SPACE</p>

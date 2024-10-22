@@ -4,6 +4,8 @@ import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 // import Mars from "./secondSection/MarsSection";
 
+// API = aQBBUXeUuBIMUrvGB9QuJl7Ag74ohqsXTmvdgqlD
+
 function App() {
   return (
     <>
