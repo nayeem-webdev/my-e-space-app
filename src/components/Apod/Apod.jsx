@@ -26,16 +26,21 @@ const Apod = () => {
           is featured, along with a brief explanation written by a professional
           astronomer.
         </p>
-        <div className="apodInfoDiv container"> 
+        <div className="apodInfoDiv container">
           <div className="width50">
             <img src={APOD?.url} alt="" />
-            <p className="DC">Date: {APOD?.date}, Copyright: {APOD?.copyright} </p>
+            <p className="DC">
+              Date: {APOD?.date}, Copyright: {APOD?.copyright}{" "}
+            </p>
           </div>
           <div className="width50">
             <h2 className="spaceF">{APOD?.title}</h2>
             <p>{APOD?.explanation}</p>
             <br />
-            <a href={APOD?.hdurl}><button className="accentButton">View HD Image</button></a>
+            <a href={APOD?.hdurl} target="_blank">
+              <button className="accentButton">View HD Image</button>
+            </a>
+            <button className="accentButton ">Add to favorites </button>
           </div>
         </div>
       </div>

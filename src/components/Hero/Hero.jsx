@@ -22,7 +22,7 @@ const Hero = () => {
 
   const heroStyle = {
     backgroundImage: APOD?.hdurl
-      ? `url(${APOD.hdurl})`
+      ? `url(${APOD.url})`
       : "url('/src/assets/space.jpg')",
   };
   return (
@@ -33,7 +33,7 @@ const Hero = () => {
             <h4>Astronomy Picture of the Day</h4>
             <h1 className="heroTitle">{APOD?.title}</h1>
             <button className="accentButton">
-              More Details <i class="fa-solid fa-arrow-right"></i>
+              More Details <i className="fa-solid fa-arrow-right"></i>
             </button>
           </div>
           <div className="width40">

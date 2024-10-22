@@ -28,7 +28,7 @@
 }
 
 .navButton {
-  background-color: var(--accent-color);
+  background-color: var(--accent-2-color);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
