@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="w-full fixed py-5 bg-opacity-70 bg-gray-900 backdrop-blur-md ">
         <div className=" container mx-auto px-5 flex justify-between items-center">
           <div className="text-2xl font-bold text-white">
-            <p className="font-orbitron">E-SPACE</p>
+            <h1>E-SPACE</h1>
           </div>
           <nav>
             <ul className="flex gap-8 list-none">

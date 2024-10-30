@@ -4,9 +4,10 @@ import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Apod from "./components/Apod/Apod";
-import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/Hero/Hero";
+import Home from "./components/Home/Home";
 import HeadFoot from "./components/HeadFoot/HeadFoot";
+import MarsRover from "./components/MarsRover/MarsRover";
+import ImageSearch from "./components/ImageSearch/ImageSearch";
 
 const router = createBrowserRouter([
   {
@@ -15,11 +16,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Hero></Hero>,
+        element: <Home></Home>,
       },
       {
         path: "/apod",
         element: <Apod></Apod>,
+      },
+      {
+        path: "/mars-rover",
+        element: <MarsRover></MarsRover>,
+      },
+      {
+        path: "/image-search",
+        element: <ImageSearch />,
       },
     ],
   },
