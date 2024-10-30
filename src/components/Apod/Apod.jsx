@@ -18,16 +18,17 @@ const Apod = () => {
   }, []);
 
   const d = new Date();
-  const startDate = d.getFullYear() + "-" + d.getMonth() + 1 + "-" + d.getDate()-20;
+  const startDate =
+    d.getFullYear() + "-" + d.getMonth() + 1 + "-" + d.getDate() - 20;
   const endDate = d.getFullYear() + "-" + d.getMonth() + 1 + "-" + d.getDate();
 
-  console.log(endDate, startDate)
+  console.log(endDate, startDate);
 
   // https://api.nasa.gov/planetary/apod?api_key=aQBBUXeUuBIMUrvGB9QuJl7Ag74ohqsXTmvdgqlD&start_date=2023-10-01&end_date=2023-10-05
 
   return (
     <>
-      <div className="px-5 py-56 container">
+      <div className="px-5 py-28 container mx-auto">
         <h1 className="text-center text-5xl font-semibold mb-5">
           Astronomy Picture of the Day
         </h1>
@@ -55,11 +56,6 @@ const Apod = () => {
               <i className="ml-2 rotate-180 fa-brands fa-space-awesome"></i>{" "}
             </button>
           </div>
-        </div>
-      </div>
-      <div className="px-5 container">
-        <div>
-          <p>view previous details</p>
         </div>
       </div>
     </>

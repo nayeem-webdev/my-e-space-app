@@ -1,5 +1,5 @@
 import "./App.css";
-import Apod from "./components/Apod/APOD";
+import Apod from "./components/Apod/Apod";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 // import Mars from "./secondSection/MarsSection";

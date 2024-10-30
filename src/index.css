@@ -12,9 +12,10 @@
   --card-color: #778da9;
   --highlight-color: #1b263b;
   --accent-color: #415a77;
-  
+
   --text-color: rgba(224, 225, 221, 1);
   --accent-2-color: rgb(253, 58, 24);
+  --accent-2-color-hover: rgb(253, 89, 58);
 }
 
 body {
@@ -36,6 +37,9 @@ h5 {
   border-radius: 20px;
   color: var(--text-color);
   font-weight: 600;
+}
+.accentButton:hover {
+  background-color: rgb(253, 89, 58);
 }
 img {
   width: 100%;

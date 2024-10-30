@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [APOD, setAPOD] = useState(null);
@@ -30,12 +31,13 @@ const Hero = () => {
           <div className="mt-20 w-3/5">
             <h4 className="text-2xl">Astronomy Picture of the Day</h4>
             <h1 className="font-semibold mt-5 mb-10 text-6xl">{APOD?.title}</h1>
-            <button className="accentButton">
-              More Details <i className="fa-solid fa-arrow-right"></i>
-            </button>
+            <Link to={"/apod"}>
+              <button className="accentButton">
+                More Details <i className="fa-solid fa-arrow-right"></i>
+              </button>
+            </Link>
           </div>
-          <div className="w-2/5">
-          </div>
+          <div className="w-2/5"></div>
         </div>
       </div>
     </>

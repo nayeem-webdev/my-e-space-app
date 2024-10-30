@@ -9,6 +9,7 @@ export default {
         highlightColor: "#1b263b",
         accentColor: "#415a77",
         accentColor2: "rgb(253, 58, 24)",
+        accentColorHover: "rgb(253, 89, 58)",
         textColor: "rgba(224, 225, 221, 1)",
       },
     },
