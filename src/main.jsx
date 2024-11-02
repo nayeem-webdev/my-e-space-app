@@ -8,6 +8,8 @@ import Home from "./components/Home/Home";
 import HeadFoot from "./components/HeadFoot/HeadFoot";
 import MarsRover from "./components/MarsRover/MarsRover";
 import ImageSearch from "./components/ImageSearch/ImageSearch";
+import ArticleHero from "./components/ArticleHero/ArticleHero";
+import BlogHero from "./components/BlogHero/BlogHero";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,16 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        children: [
+          {
+            path: "/",
+            element: <ArticleHero />,
+          },
+          {
+            path: "/blogs",
+            element: <BlogHero />,
+          },
+        ],
       },
       {
         path: "/apod",

@@ -1,11 +1,13 @@
-import ArticleHero from "../ArticleHero/ArticleHero";
+import { Outlet } from "react-router-dom";
 import Hero from "../Hero/Hero";
+import HeroChildTabs from "../HeroChildTabs/HeroChildTabs";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <ArticleHero />
+      <HeroChildTabs />
+      <Outlet />
     </>
   );
 };
