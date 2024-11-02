@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
 import Card from "../Card/Card";
 
-const BlogHero = () => {
-  const [Blogs, setBlogs] = useState();
+const ReportHero = () => {
+  const [Reports, setReports] = useState();
   const [url, setUrl] = useState(
-    "https://api.spaceflightnewsapi.net/v4/blogs/?format=json&limit=6"
+    "https://api.spaceflightnewsapi.net/v4/reports/?format=json&limit=6"
   );
   useEffect(() => {
-    const fetchBlogs = async (url) => {
+    const fetchReports = async (url) => {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setBlogs(data);
+        setReports(data);
       } catch (error) {
         console.log("ERROR: ", error);
       }
     };
-    fetchBlogs(url);
+    fetchReports(url);
   }, [url]);
 
   const [pageCount, setPageCount] = useState(1);
@@ -33,19 +33,19 @@ const BlogHero = () => {
     <div>
       <div className="container mx-auto px-5 py-10">
         <h2 className="text-3xl font-bold text-white mb-6 text-center">
-          Latest Blogs
+          Latest Reports
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Blogs?.results.map((blog) => (
-            <Card key={blog.id} content={blog}></Card>
+          {Reports?.results.map((report) => (
+            <Card key={report.id} content={report}></Card>
           ))}
         </div>
 
         <div className="flex justify-around mt-8 items-center">
           <button
-            onClick={() => handlePreviousClick(Blogs?.previous)}
+            onClick={() => handlePreviousClick(Reports?.previous)}
             className="bg-accentColorHover hover:bg-gray-500 text-white px-4 py-2 rounded disabled:bg-gray-500"
-            disabled={Blogs?.previous === null}
+            disabled={Reports?.previous === null}
           >
             <i className="fa-solid fa-angles-left"></i>
           </button>
@@ -53,9 +53,9 @@ const BlogHero = () => {
             {pageCount}
           </h3>
           <button
-            onClick={() => handleNextClick(Blogs?.next)}
+            onClick={() => handleNextClick(Reports?.next)}
             className="bg-accentColorHover hover:bg-gray-500 text-white px-4 py-2 rounded disabled:bg-gray-500"
-            disabled={Blogs?.next === null}
+            disabled={Reports?.next === null}
           >
             <i className="fa-solid fa-angles-right"></i>
           </button>
@@ -65,4 +65,4 @@ const BlogHero = () => {
   );
 };
 
-export default BlogHero;
+export default ReportHero;

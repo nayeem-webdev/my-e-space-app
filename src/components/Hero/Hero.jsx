@@ -20,13 +20,11 @@ const Hero = () => {
   }, []);
 
   const heroStyle = {
-    backgroundImage: APOD?.hdurl
-      ? `url(${APOD.url})`
-      : "url('/src/assets/space.jpg')",
+    backgroundImage: `url(${APOD?.url})`,
   };
   return (
     <>
-      <div className="px-5 bg-no-repeat bg-cover bg-bottom" style={heroStyle}>
+      <div className="px-5 bg-no-repeat bg-cover bg-center" style={heroStyle}>
         <div className="container h-screen flex items-center justify-center w-full max-h-screen">
           <div className="mt-20 w-3/5">
             <h4 className="text-2xl">Astronomy Picture of the Day</h4>

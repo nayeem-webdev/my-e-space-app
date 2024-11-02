@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import TitleHead from "../TitleHead/TitleHead";
 
 const Apod = () => {
   const [APOD, setAPOD] = useState(null);
@@ -29,14 +30,12 @@ const Apod = () => {
   return (
     <>
       <div className="px-5 py-28 container mx-auto">
-        <h1 className="text-center text-5xl font-semibold mb-5">
-          Astronomy Picture of the Day
-        </h1>
-        <p className="text-center w-2/3 mx-auto">
-          Each day a different image or photograph of our fascinating universe
-          is featured, along with a brief explanation written by a professional
-          astronomer.
-        </p>
+        <TitleHead
+          title={"Astronomy Picture of the Day"}
+          subtitle={
+            "Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer."
+          }
+        />
         <div className="mt-8 flex gap-8 ">
           <div className="w-1/2">
             <img className="" src={APOD?.url} alt="" />

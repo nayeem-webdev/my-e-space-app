@@ -10,11 +10,14 @@ import MarsRover from "./components/MarsRover/MarsRover";
 import ImageSearch from "./components/ImageSearch/ImageSearch";
 import ArticleHero from "./components/ArticleHero/ArticleHero";
 import BlogHero from "./components/BlogHero/BlogHero";
+import ReportHero from "./components/ReportsHero/ReportsHero";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HeadFoot></HeadFoot>,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
@@ -27,6 +30,10 @@ const router = createBrowserRouter([
           {
             path: "/blogs",
             element: <BlogHero />,
+          },
+          {
+            path: "/reports",
+            element: <ReportHero />,
           },
         ],
       },
