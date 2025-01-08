@@ -67,6 +67,43 @@ My Space App aims to bring the wonders of the universe closer to everyone. Using
 
 ---
 
+## 🛠️ How to Run the Project Locally
+
+To run this project on your local machine, follow these steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/nayeem-webdev/my-e-space-app.git
+   cd my-e-space-app
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the App:**
+   Open your browser and navigate to `http://localhost:3000` to view the app.
+
+5. **Build for Production:**
+   To create an optimized build, run:
+   ```bash
+   npm run build
+   ```
+
+6. **Preview Production Build:**
+   After building, you can preview the app with:
+   ```bash
+   npm run preview
+   ```
+
+---
+
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
